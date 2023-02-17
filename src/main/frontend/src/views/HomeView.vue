@@ -1,6 +1,9 @@
 <script setup>
+import SliderComponent from "../components/SliderComponent.vue";
+import EventComponent from "../components/EventComponent.vue";
 </script>
-<h1>This is an home page</h1>
 <template>
+<SliderComponent/>
+  <EventComponent />
 </template>
-<style scoped></style>
+<style></style>
