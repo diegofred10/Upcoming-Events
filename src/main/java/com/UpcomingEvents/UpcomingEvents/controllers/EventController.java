@@ -2,9 +2,13 @@ package com.UpcomingEvents.UpcomingEvents.controllers;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,6 +44,25 @@ public class EventController {
         service.save(event);
     }
     
-    
+    @DeleteMapping(path = "/{id}")
+    public List<Event> delete(@PathVariable Long id){
+        return service.delete(id);
+    }
+
+    @PutMapping(path = "/{id}")
+    public ResponseEntity<Event> update(@PathVariable Long id, @RequestBody EventPayload event){
+        Event eventTemporal = service.getOne(id);
+        try {
+            if (eventTemporal != null) {
+                event.setId(id);
+                service.save(event);
+                return new ResponseEntity<>(HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);               
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+    } 
 }
 

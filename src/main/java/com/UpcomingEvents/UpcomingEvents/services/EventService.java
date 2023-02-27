@@ -24,7 +24,14 @@ private EventRepository repository;
     }
     public void save(EventPayload event) {
         Event eventToAdd = new Event(null, event.getTitle(), event.getDate(), event.getMax_users(), event.getDescription(), event.getImage(), event.isAvailable());
+        if (event.getId()!=null) {
+            eventToAdd.setId(event.getId());
+        }
         repository.save(eventToAdd);
+    }
+    public List<Event> delete(Long id) {
+        repository.deleteById(id);
+        return repository.findAll();
     }
     
 }
