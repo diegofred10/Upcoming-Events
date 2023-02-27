@@ -8,4 +8,6 @@ import NavBarComponent from "../components/NavBarComponent.vue"
 <SliderComponent/>
   <EventComponent />
 </template>
-<style></style>
+<style scoped></style>
+
+
