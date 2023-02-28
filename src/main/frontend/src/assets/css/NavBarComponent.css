@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Kreon&family=Signika:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
+
+
+.navbar{
+  color: #eaeaea;
+  font-family: "Kreon", serif;
+}
+
+.hi {
+  color: #eaeaea;
+  font-family:"Kreon", serif;
+  background-color: #121212;
+}
+
+nav{
+  background-color: #121212;
+}
+
+.home{
+  background-color: #121212;
+  color:#eaeaea;
+  border: none;
+}
+
+.myevents{
+  background-color: #121212;
+  color: #eaeaea;
+  border:none;
+
+}
+
+.container{
+  align-items: flex-end;
+
+}
+
+
+
