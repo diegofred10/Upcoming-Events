@@ -1,8 +1,10 @@
-<script setup></script>
+<script setup>
+
+</script>
 <template>
   <button
     type="button"
-    class="btn btn-primary"
+    class="log-in-button"
     data-bs-toggle="modal"
     data-bs-target="#staticLogIn"
   >
@@ -73,4 +75,5 @@
 </template>
 <style scoped>
 @import "../assets/css/styleForm.css";
+@import "../assets/css/NavBarComponent.css";
 </style>

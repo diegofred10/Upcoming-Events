@@ -2,11 +2,11 @@
 <template>
   <button
     type="button"
-    class="btn btn-primary"
+    class="add-event-button"
     data-bs-toggle="modal"
     data-bs-target="#staticBackdrop"
   >
-    Formulario
+    Add Event
   </button>
 
   <div
@@ -89,4 +89,5 @@
 </template>
 <style scoped>
 @import "../assets/css/styleForm.css";
+@import "../assets/css/NavBarComponent.css";
 </style>
