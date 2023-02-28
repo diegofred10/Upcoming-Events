@@ -1,12 +1,10 @@
 <script setup>
 import SliderComponent from "../components/SliderComponent.vue";
 import EventComponent from "../components/EventComponent.vue";
-import NavBarComponent from "../components/NavBarComponent.vue";
-import PopUpForm from "../components/PopUpForm.vue";
-import PopUpLogin from "../components/PopUpLogin.vue";
+import Header from "../components/Header.vue"
 </script>
 <template>
-  <NavBarComponent/>
+  <Header/>
 <SliderComponent/>
   <EventComponent />
   <PopUpForm/>
@@ -15,5 +13,3 @@ import PopUpLogin from "../components/PopUpLogin.vue";
   <PopUpLogin/>
 </template>
 <style scoped></style>
-
-
