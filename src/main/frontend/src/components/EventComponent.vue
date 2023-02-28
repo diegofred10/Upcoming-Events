@@ -1,7 +1,11 @@
 <script setup></script>
 <template>
+  <p class="sidebar-text">SideBar</p>
   <div class="event-container">
-    <img src="../assets/messi.jpeg" alt="messi" />
+    <div class="sidebar-select">
+      <input type="checkbox" class="checkbox" name="" id="" />
+    </div>
+    <img src="" alt="" />
     <div class="info-container">
       <div class="info-top">
         <h2>Cometcon</h2>
@@ -14,7 +18,11 @@
       </p>
     </div>
     <div class="data-container">
-      <button>Sign up</button>
+      <!-- para que aparezcan los estilos del boton clickeado = button-click -->
+      <!-- <button class="button">Sign up</button> -->
+      <!-- <button class="using-button">Using</button> -->
+      <!-- <span class="full">FULL</span> -->
+      <button class="button-click">Edit</button>
       <span>11/20</span>
     </div>
   </div>

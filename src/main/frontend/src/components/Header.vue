@@ -8,18 +8,18 @@
         class="logo"
         alt="Upcoming Events Logo"
       />
-      <!-- <div class="front-page-container">
+      <div class="front-page-container">
         <button class="log-in-button">Log In</button>
-      </div>--->
+      </div>
       <!-- <div class="user-view-container">
         <button class="home-button">Home</button>
         <button class="my-events-button">My events</button>
         <p class="hi-user">Hi, Username</p>
       </div>  -->
-      <div class="admin-view-container">
+      <!-- <div class="admin-view-container">
         <button class="add-event-button">Add Event</button>
         <p class="hi-user">Hi, AdminName</p>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>
