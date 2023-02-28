@@ -29,8 +29,6 @@ public class Event {
         this.available = available;
     }
 
-
-
     public Event() {
     }
 
