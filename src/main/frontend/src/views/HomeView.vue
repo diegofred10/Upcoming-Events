@@ -1,13 +1,11 @@
 <script setup>
 import SliderComponent from "../components/SliderComponent.vue";
 import EventComponent from "../components/EventComponent.vue";
-import NavBarComponent from "../components/NavBarComponent.vue"
+import Header from "../components/Header.vue"
 </script>
 <template>
-  <NavBarComponent/>
+  <Header/>
 <SliderComponent/>
   <EventComponent />
 </template>
 <style scoped></style>
-
-
