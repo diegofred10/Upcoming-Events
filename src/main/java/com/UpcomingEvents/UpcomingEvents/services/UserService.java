@@ -27,6 +27,9 @@ public class UserService {
 
     public void save(UserPayload user) {
         User userToAdd = new User(null, user.getName(), user.getPassword(), user.getRol(), null);
+        if (user.getId()!=null) {
+            userToAdd.setId(user.getId());
+        }
         repository.save(userToAdd);
     }
 
