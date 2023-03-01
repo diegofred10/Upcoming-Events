@@ -29,5 +29,11 @@ public class UserService {
         User userToAdd = new User(null, user.getName(), user.getPassword(), user.getRol(), null);
         repository.save(userToAdd);
     }
+
+    public List<User> delete(Long id) {
+        repository.deleteById(id);
+        return repository.findAll();
+    }
+    
     
 }
