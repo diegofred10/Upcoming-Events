@@ -6,11 +6,19 @@ import PopUpLogin from './PopUpLogin.vue';
 
 <template>
   <header>
-    <div class="header-content">
+    <div class="header-content navbar navbar-expand-lg">
       <div class="col-md-2 p-2">
         <img src="../assets/resources/Upcomming-events-logo.png" class="img img-fluid" alt="Upcoming Events Logo">
-  </div>
-      
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#opciones"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="opciones">
       <!-- <div class="front-page-container">
         <PopUpLogin/>
       </div> -->
@@ -25,7 +33,7 @@ import PopUpLogin from './PopUpLogin.vue';
         <PopUpForm/>
         <p class="hi-user">Hi, AdminName</p>
       </div> -->
-
+    </div>
     </div>
   </header>
 </template>
