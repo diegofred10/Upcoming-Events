@@ -1,6 +1,5 @@
 <script setup></script>
 <template>
-  <p class="sidebar-text">SideBar</p>
   <div class="event-container">
     <div class="sidebar-select">
       <input type="checkbox" class="checkbox" name="" id="" />

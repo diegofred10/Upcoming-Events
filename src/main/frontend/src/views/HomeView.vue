@@ -5,7 +5,7 @@ import Header from "../components/Header.vue";
 import PaginationComponent from "../components/PaginationComponent.vue";
 </script>
 <template>
-  <Header />
+  <Header></Header>
   <SliderComponent />
   <EventComponent />
   <PaginationComponent/>
