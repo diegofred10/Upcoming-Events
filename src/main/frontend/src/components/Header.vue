@@ -8,7 +8,7 @@ import PopUpLogin from './PopUpLogin.vue';
   <header>
     <div class="header-content navbar navbar-expand-lg">
       <div class="col-md-2 p-2">
-        <img src="../assets/resources/Upcomming-events-logo.png" class="img img-fluid" alt="Upcoming Events Logo">
+        <img src="../assets/resources/Upcomming-events-logo.png" class="img img-fluid" alt="Upcoming Events Logo" id="logoHeader">
       </div>
       <button
         class="navbar-toggler"
@@ -18,10 +18,11 @@ import PopUpLogin from './PopUpLogin.vue';
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="opciones">
+     <div class="collapse navbar-collapse justify-content-end" id="opciones"> 
+
       <!-- <div class="front-page-container">
         <PopUpLogin/>
-      </div> -->
+      </div>   -->
 
       <div class="user-view-container">
         <button class="home-button">Home</button>
@@ -33,6 +34,7 @@ import PopUpLogin from './PopUpLogin.vue';
         <PopUpForm/>
         <p class="hi-user">Hi, AdminName</p>
       </div> -->
+    
     </div>
     </div>
   </header>
@@ -40,4 +42,13 @@ import PopUpLogin from './PopUpLogin.vue';
 
 <style scoped>
 @import "../assets/css/NavBarComponent.css";
+@media (max-width:900px){
+#logoHeader{
+  height: 100px;
+}
+}
+.my-events-button,.home-button,.hi-user{
+  font-size: 1.4em;
+}
+
 </style>
