@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.UpcomingEvents.UpcomingEvents.models.Event;
 import com.UpcomingEvents.UpcomingEvents.models.User;
 import com.UpcomingEvents.UpcomingEvents.payloads.UserPayload;
 import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
@@ -36,6 +37,10 @@ public class UserService {
     public List<User> delete(Long id) {
         repository.deleteById(id);
         return repository.findAll();
+    }
+
+    public void signIn(User user, Event event) {
+        user.getEvents().add(event);
     }
     
     

@@ -13,14 +13,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.UpcomingEvents.UpcomingEvents.models.Event;
 import com.UpcomingEvents.UpcomingEvents.models.User;
 import com.UpcomingEvents.UpcomingEvents.payloads.UserPayload;
+import com.UpcomingEvents.UpcomingEvents.services.EventService;
 import com.UpcomingEvents.UpcomingEvents.services.UserService;
+
+
 
 @RestController
 @RequestMapping(path = "/api/users")
 public class UserController {
     private UserService service;
+    private EventService eventService;
 
 
     public UserController(UserService service) {
@@ -58,5 +63,11 @@ public class UserController {
         }
         
     }
+@PutMapping(path="/{id}")
+public void signIn (@PathVariable Long id_user, @RequestBody Long id_event){
+    User user = service.getOne(id_user);
+    Event event = eventService.getOne(id_event);
+    service.signIn(user,event);
 
+}
 }
