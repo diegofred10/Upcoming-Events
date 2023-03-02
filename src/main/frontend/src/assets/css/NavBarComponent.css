@@ -89,6 +89,6 @@ header {
 }
 @media (max-width: 900px) {
   #logoHeader {
-    height: 100px;
+    height: 50px;
   }
 }

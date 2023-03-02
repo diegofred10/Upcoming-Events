@@ -10,6 +10,7 @@ function changeColor() {
   <button
     type="button"
     class="button"
+    id="btnEdit"
     data-bs-toggle="modal"
     data-bs-target="#editForm"
     @click="changeColor()"

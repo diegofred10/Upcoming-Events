@@ -9,7 +9,7 @@ function changeColor() {
     <!-- <div class="sidebar-select">
       <input type="checkbox" class="checkbox" name="" id="" />
     </div> -->
-    <img src="../assets/resources/cometcon.svg" alt="cometcon logo" class="logo"/>
+    <img id = "imgEvent" src="../assets/resources/cometcon.svg" alt="cometcon logo" class="logo"/>
     <div class="info-container">
       <div class="info-top">
         <h2>Cometcon</h2>
