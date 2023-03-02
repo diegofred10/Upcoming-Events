@@ -90,4 +90,5 @@
 <style scoped>
 @import "../assets/css/styleForm.css";
 @import "../assets/css/NavBarComponent.css";
+
 </style>

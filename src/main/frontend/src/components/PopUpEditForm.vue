@@ -1,10 +1,18 @@
-<script setup></script>
+<script setup>
+function changeColor() {
+  let button = document.querySelector(".button");
+  if (button.className == "button") {
+    button.className = "button-click"
+  }
+}
+</script>
 <template>
   <button
     type="button"
-    class="add-event-button"
+    class="button"
     data-bs-toggle="modal"
     data-bs-target="#editForm"
+    @click="changeColor()"
   >
     Edit
   </button>
@@ -89,5 +97,6 @@
 </template>
 <style scoped>
 @import "../assets/css/styleForm.css";
+@import '../assets/css/eventComponent.css';
 @import "../assets/css/NavBarComponent.css";
 </style>
