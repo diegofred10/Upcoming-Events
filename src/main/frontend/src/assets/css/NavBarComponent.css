@@ -44,6 +44,9 @@ header {
   font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
+.my-events-button:active{
+  background-color: pink;
+}
 .hi-user {
   background: none;
   border: none;
