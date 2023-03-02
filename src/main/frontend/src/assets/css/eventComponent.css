@@ -101,4 +101,11 @@
   .info-text{
   font-size: small;
   }
+  #btnEdit {
+    margin-top: 75px;
+  }
+  #imgEvent {
+    width: 101px;
+    height: 90px;
+  }
   }
