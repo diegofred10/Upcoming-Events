@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class UserTest {
     User miUser = new User(1L, "Diego", "12345", "admin", null);
-Event miEvent = new Event(1L, "concierto", null, 20, "ojete calor en concierto", "url.jpg", false);
+Event miEvent = new Event(1L, "concierto", null, 20, 0, "ojete calor en concierto", "url.jpg", false);
     @Test
 void UserNameIsDiego(){
 String name = miUser.getName();

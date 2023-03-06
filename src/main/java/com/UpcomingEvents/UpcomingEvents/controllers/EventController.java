@@ -41,7 +41,7 @@ public class EventController {
 
     @PostMapping(path = "")
     public void save(@RequestBody EventPayload event){
-        service.save(event);
+        service.save(null, event);
     }
     
     @DeleteMapping(path = "/{id}")
@@ -51,11 +51,9 @@ public class EventController {
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<Event> update(@PathVariable Long id, @RequestBody EventPayload event){
-        Event eventTemporal = service.getOne(id);
         try {
-            if (eventTemporal != null) {
-                event.setId(id);
-                service.save(event);
+            if (service.getOne(id) != null) {
+                service.save(id, event);
                 return new ResponseEntity<>(HttpStatus.OK);
             }
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);               
