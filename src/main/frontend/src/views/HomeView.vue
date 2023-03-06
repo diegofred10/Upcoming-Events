@@ -1,16 +1,11 @@
 <script setup>
 import SliderComponent from "../components/SliderComponent.vue";
 import EventComponent from "../components/EventComponent.vue";
+import Header from "../components/Header.vue"
 </script>
 <template>
-
+  <Header/>
 <SliderComponent/>
   <EventComponent />
 </template>
-<style></style>
-
-    <h1>This is an home page</h1>
-</template>
 <style scoped></style>
-
-
