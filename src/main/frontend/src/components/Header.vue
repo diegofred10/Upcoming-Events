@@ -16,7 +16,7 @@ import PopUpLogin from './PopUpLogin.vue';
         data-bs-toggle="collapse"
         data-bs-target="#opciones"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon my-toggler bg-primary"></span>
       </button>
      <div class="collapse navbar-collapse justify-content-end" id="opciones"> 
 
@@ -27,15 +27,16 @@ import PopUpLogin from './PopUpLogin.vue';
       <div class="user-view-container">
         <button class="home-button">Home</button>
         <button class="my-events-button">My events</button>
-        <p class="hi-user">Hi, Username</p>
+        
       </div> 
 
       <!-- <div class="admin-view-container">
         <PopUpForm/>
         <p class="hi-user">Hi, AdminName</p>
       </div> -->
-    
+      
     </div>
+    <p class="hi-user">Hi, Username</p>
     </div>
   </header>
 </template>
