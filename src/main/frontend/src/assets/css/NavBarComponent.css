@@ -27,20 +27,21 @@ header {
 }
 .home-button {
   border: none;
-  background-color: #e32652;
-  color: #eaeaea;
   height: 5rem;
-  width: 7rem;
+  color: #eaeaea;
+  width: 8rem;
   font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
+#button-on {
+  background-color: #e32652;
+}
 .my-events-button {
-  background: none;
   border: none;
   border-right: 2px solid white;
   color: #eaeaea;
   height: 5rem;
-  width: 8rem;
+  width: 10rem;
   font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
@@ -54,6 +55,12 @@ header {
   font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
+#button-off {
+  background-color: #121212;
+}
+#options {
+  width: 40%;
+}
 .user-view-container {
   width: 29%;
   display: flex;
@@ -63,13 +70,25 @@ header {
   display: flex;
   align-items: baseline;
 }
-.add-event-button{
+.add-event-button {
   background: none;
   border: none;
-  border: 2px solid #E32652;
+  border: 2px solid #e32652;
   color: #eaeaea;
   height: 5rem;
-  width: 8rem;
+  width: 10rem;
   font-size: 1.5rem;
   font-family: "Kreon", serif;
+}
+.navbar-toggler {
+  background-color: #e32652;
+  border: 2px solid #eaeaea;
+}
+#pp {
+  color: #eaeaea;
+}
+@media (max-width: 900px) {
+  #logoHeader {
+    height: 50px;
+  }
 }
