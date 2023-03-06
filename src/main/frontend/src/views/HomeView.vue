@@ -6,6 +6,7 @@ import PaginationComponent from "../components/PaginationComponent.vue";
 </script>
 <template>
   <Header/>
+
 <SliderComponent/>
   <EventComponent />
   <PaginationComponent/>

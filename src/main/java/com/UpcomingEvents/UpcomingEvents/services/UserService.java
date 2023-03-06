@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+
 import com.UpcomingEvents.UpcomingEvents.models.User;
 import com.UpcomingEvents.UpcomingEvents.payloads.UserPayload;
 import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
@@ -25,9 +26,14 @@ public class UserService {
         return repository.findById(id).get();
     }
 
-    public void save(UserPayload user) {
-        User userToAdd = new User(null, user.getName(), user.getPassword(), user.getRol(), null);
+    public void save(Long id, UserPayload user) {
+        User userToAdd = new User(id, user.getName(), user.getPassword(), user.getRol(), null);
         repository.save(userToAdd);
     }
+
+    public List<User> delete(Long id) {
+        repository.deleteById(id);
+        return repository.findAll();
+    } 
     
 }

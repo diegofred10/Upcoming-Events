@@ -22,9 +22,13 @@ private EventRepository repository;
     public Event getOne(Long id) {
         return repository.findById(id).get();
     }
-    public void save(EventPayload event) {
-        Event eventToAdd = new Event(null, event.getTitle(), event.getDate(), event.getMax_users(), event.getDescription(), event.getImage(), event.isAvailable());
+    public void save(Long id, EventPayload event) {
+        Event eventToAdd = new Event(id, event.getTitle(), event.getDate(), event.getMax_users(), event.getSigned_users(), event.getDescription(), event.getImage(), event.isAvailable());
         repository.save(eventToAdd);
+    }
+    public List<Event> delete(Long id) {
+        repository.deleteById(id);
+        return repository.findAll();
     }
     
 }
