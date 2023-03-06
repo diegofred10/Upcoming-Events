@@ -5,7 +5,7 @@
   margin: 15px;
 }
 .event-container img {
-  width: 15%;
+  width: 10%;
 }
 .event-container .info-container {
   margin: 0 10px;
@@ -28,16 +28,16 @@
 }
 .event-container .info-container .info-text {
   color: #eaeaea;
-  font-family: 'Lexend', sans-serif;;
+  font-family: "Lexend", sans-serif;
 }
 .data-container {
-  width: 20%;
+  width: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.data-container button {
+.button {
   background-color: #e32652;
   border: none;
   color: #eaeaea;
@@ -45,9 +45,67 @@
   height: 40px;
   border-radius: 20px;
   font-size: 1rem;
+  font-family: "Kreon", serif;
 }
 .data-container span {
   color: #eaeaea;
   font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
+.sidebar-text {
+  color: #eaeaea;
+}
+
+.button-click {
+  background-color: #121212;
+  border: 2px solid #e32652;
+  color: #eaeaea;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-family: "Kreon", serif;
+}
+.checkbox {
+  width: 20px;
+}
+
+.sidebar-select {
+  display: flex;
+    width: 5%;
+    justify-content: space-evenly;
+}
+
+.using-button {
+  background-color: #8e8e8e;
+  border: none;
+  color: #eaeaea;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-family: "Kreon", serif;
+}
+@media (max-width:900px){
+  #editBtn{
+    margin-top: 40px;
+    height: 40px;
+    width: 60px;
+  }
+  #aforum{
+    font-size: medium;
+  }
+  #dateEvent{
+    font-size: medium;
+  }
+  .info-text{
+  font-size: small;
+  }
+  #btnEdit {
+    margin-top: 75px;
+  }
+  #imgEvent {
+    width: 101px;
+    height: 90px;
+  }
+  }
