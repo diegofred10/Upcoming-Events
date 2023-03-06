@@ -23,3 +23,20 @@ input{
 #ADDbutton{
     width: 10em;
 }
+.modal-title{
+    width: 60%;
+    text-align: end;
+}
+.login-text {
+    width: 60%;
+    text-align: end;
+  }
+#button{
+    background-color: #e32652;
+    border: none;
+    border-radius: 20px;
+    width: 20%;
+}
+#inputDescription{
+    height: 7rem;
+  }

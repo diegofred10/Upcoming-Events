@@ -1,13 +1,15 @@
 <script setup>
 import PopUpEditForm from './PopUpEditForm.vue';
-
+function changeColor() {
+  alert("funciona")
+}
 </script>
 <template>
   <div class="event-container">
-    <div class="sidebar-select">
+    <!-- <div class="sidebar-select">
       <input type="checkbox" class="checkbox" name="" id="" />
-    </div>
-    <img src="" alt="" />
+    </div> -->
+    <img id = "imgEvent" src="../assets/resources/cometcon.svg" alt="cometcon logo" class="logo"/>
     <div class="info-container">
       <div class="info-top">
         <h2>Cometcon</h2>
@@ -25,27 +27,12 @@ import PopUpEditForm from './PopUpEditForm.vue';
       <!-- <button class="using-button">Using</button> -->
       <!-- <span class="full">FULL</span> -->
 
-      <PopUpEditForm class="button-click" id="editBtn"/>
+      <PopUpEditForm/>
       <span id="aforum">11/20</span>
     </div>
   </div>
 </template>
 <style scoped>
 @import "../assets/css/eventComponent.css";
-@media (max-width:900px){
-#editBtn{
-  margin-top: 40px;
-  height: 40px;
-  width: 60px;
-}
-#aforum{
-  font-size: medium;
-}
-#dateEvent{
-  font-size: medium;
-}
-.info-text{
-font-size: small;
-}
-}
+
 </style>

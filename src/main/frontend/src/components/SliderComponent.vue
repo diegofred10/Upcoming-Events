@@ -38,6 +38,7 @@
 <style scoped>
 .sidebar-text{
   color: #eaeaea;
+  margin-left: 20px;
 }
 
 #sideOne, #sideTwo, #sideThree {
