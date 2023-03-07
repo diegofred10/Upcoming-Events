@@ -13,17 +13,19 @@ public class Event {
     private String title;
     private Date date;
     private int max_users;
+    private int signed_users;
     private String description;
     private String image;
     private boolean available;
     
 
 
-    public Event(Long id, String title, Date date, int max_users, String description, String image, boolean available) {
+    public Event(Long id, String title, Date date, int max_users, int signed_users, String description, String image, boolean available) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.max_users = max_users;
+        this.signed_users = 0;
         this.description = description;
         this.image = image;
         this.available = available;
@@ -71,8 +73,15 @@ public class Event {
     public void setMax_users(int max_users) {
         this.max_users = max_users;
     }
+    
+    public int getSigned_users() {
+        return signed_users;
+    }
 
-
+    public void setSigned_users(int signed_users) {
+        this.signed_users = signed_users;
+    }
+    
     public String getDescription() {
         return description;
     }
@@ -101,6 +110,7 @@ public class Event {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
 
     
     
