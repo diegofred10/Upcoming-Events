@@ -41,3 +41,4 @@ import PopUpLogin from "./PopUpLogin.vue";
 <style scoped>
 @import "../assets/css/NavBarComponent.css";
 </style>
+

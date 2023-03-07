@@ -72,8 +72,8 @@
 
 .sidebar-select {
   display: flex;
-    width: 5%;
-    justify-content: space-evenly;
+  width: 5%;
+  justify-content: space-evenly;
 }
 
 .using-button {
@@ -86,20 +86,20 @@
   font-size: 1rem;
   font-family: "Kreon", serif;
 }
-@media (max-width:900px){
-  #editBtn{
+@media (max-width: 425px) {
+  #editBtn {
     margin-top: 40px;
     height: 40px;
     width: 60px;
   }
-  #aforum{
+  #aforum {
     font-size: medium;
   }
-  #dateEvent{
+  #dateEvent {
     font-size: medium;
   }
-  .info-text{
-  font-size: small;
+  .info-text {
+    font-size: small;
   }
   #btnEdit {
     margin-top: 75px;
@@ -108,4 +108,4 @@
     width: 101px;
     height: 90px;
   }
-  }
+}

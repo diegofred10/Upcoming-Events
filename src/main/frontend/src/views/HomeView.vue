@@ -18,7 +18,6 @@ onBeforeMount(async () => {
   <SliderChecking/>
 <SliderComponent/>
   <EventComponent />
-  <PaginationComponent/>
-  
+  <PaginationComponent />
 </template>
 <style scoped></style>
