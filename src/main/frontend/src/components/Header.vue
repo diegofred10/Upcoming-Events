@@ -30,10 +30,12 @@ import PopUpLogin from "./PopUpLogin.vue";
         <div class="user-view-container">
           <button class="home-button" id="button-on">Home</button>
           <button class="my-events-button" id="button-off">My events</button>
+          <p class="hi-user">Hi, Username</p>
         </div>
 
         <!-- <div class="admin-view-container">
           <PopUpForm />
+          <p class="hi-user">Hi, Username</p>
         </div> -->
       </div>
     </div>
