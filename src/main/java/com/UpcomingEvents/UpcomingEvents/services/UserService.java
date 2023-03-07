@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-
 import com.UpcomingEvents.UpcomingEvents.models.User;
 import com.UpcomingEvents.UpcomingEvents.payloads.UserPayload;
 import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
@@ -12,7 +11,7 @@ import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
 @Service
 public class UserService {
     private UserRepository repository;
-    
+     
 
     public UserService(UserRepository repository) {
         this.repository = repository;
