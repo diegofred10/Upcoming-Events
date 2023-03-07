@@ -27,15 +27,13 @@ import PopUpLogin from "./PopUpLogin.vue";
         <PopUpLogin/>
       </div>   -->
 
-        <!-- <div class="user-view-container" id="options">
-          <button class="home-button" id="button-on">Home</button>
-          <button class="my-events-button" id="button-off">My events</button>
-          <p class="hi-user">Hi, Username</p>
-        </div> -->
+      <div class="user-view-container">
+        <button class="home-button">Home</button>
+        <button class="my-events-button">My events</button>
+        </div>
 
         <div class="admin-view-container">
         <PopUpForm/>
-        <p class="hi-user">Hi, AdminName</p>
       </div>
       </div>
     </div>
