@@ -1,9 +1,5 @@
 <script setup>
 import PopUpEditForm from './PopUpEditForm.vue';
-function changeColor() {
-  alert("funciona")
-}
-
 </script>
 <template>
   <div class="event-container">

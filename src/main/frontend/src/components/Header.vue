@@ -27,14 +27,14 @@ import PopUpLogin from "./PopUpLogin.vue";
         <PopUpLogin/>
       </div>   -->
 
-      <div class="user-view-container">
-        <button class="home-button">Home</button>
-        <button class="my-events-button">My events</button>
+        <div class="user-view-container">
+          <button class="home-button" id="button-on">Home</button>
+          <button class="my-events-button" id="button-off">My events</button>
         </div>
 
-        <div class="admin-view-container">
-        <PopUpForm/>
-      </div>
+        <!-- <div class="admin-view-container">
+          <PopUpForm />
+        </div> -->
       </div>
     </div>
   </header>
@@ -42,6 +42,4 @@ import PopUpLogin from "./PopUpLogin.vue";
 
 <style scoped>
 @import "../assets/css/NavBarComponent.css";
-
-
 </style>
