@@ -8,9 +8,15 @@
       <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
       <img src="../assets/resources/example.svg" class="img-fluid d-block" alt="...">
       <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
+      <img src="../assets/resources/example.svg" class="img-fluid d-block" alt="...">
     </div>
     <div class="carousel-item d-flex justify-content-center" id="sideTwo">
       <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
       <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
       <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
       <img src="../assets/resources/example.svg" class="img-fluid d-block" alt="...">
@@ -20,15 +26,18 @@
       <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
       <img src="../assets/resources/example.svg" class="img-fluid d-block" alt="...">
       <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/cometcon.svg" class="img-fluid d-block" alt="...">
+      <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
       <img src="../assets/resources/talleresempleabilidad.svg" class="d-block" alt="...">
       <img src="../assets/resources/example.svg" class="img-fluid d-block" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev" id="btnPrev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next" id="btnNext">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -44,5 +53,10 @@
 #sideOne, #sideTwo, #sideThree {
 height: 10em;
 }
+
+#btnPrev, #btnNext{
+  width: 3em;
+}
+
 
 </style>
