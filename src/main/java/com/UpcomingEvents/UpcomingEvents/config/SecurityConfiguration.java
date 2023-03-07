@@ -22,7 +22,7 @@ public class SecurityConfiguration {
                 .authorizeRequests(auth -> auth
                         // .antMatchers("/api/dogs").hasRole("USER")
                         // .antMatchers("/api/cats").hasRole("ADMIN")
-                        .anyRequest().authenticated())
+                        .anyRequest().permitAll())
                 .headers(header -> header.frameOptions().disable())
                 .httpBasic(Customizer.withDefaults());
 
