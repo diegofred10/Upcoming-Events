@@ -1,18 +1,14 @@
 <script setup>
 import SliderComponent from "../components/SliderComponent.vue";
 import EventComponent from "../components/EventComponent.vue";
-import NavBarComponent from "../components/NavBarComponent.vue"
+import Header from "../components/Header.vue";
+import PaginationComponent from "../components/PaginationComponent.vue";
 </script>
 <template>
-  <NavBarComponent/>
+  <Header/>
 
 <SliderComponent/>
   <EventComponent />
-</template>
-<style></style>
-
-    <h1>This is an home page</h1>
+  <PaginationComponent/>
 </template>
 <style scoped></style>
-
-

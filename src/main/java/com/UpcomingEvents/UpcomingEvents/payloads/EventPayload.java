@@ -14,6 +14,7 @@ public class EventPayload {
     private String title;
     private Date date;
     private int max_users;
+    private int signed_users;
     private String description;
     private String image;
     private boolean available;
@@ -24,12 +25,13 @@ public class EventPayload {
     
     }
 
-    public EventPayload(Long id, String title, Date date, int max_users, String description, String image,
+    public EventPayload(Long id, String title, Date date, int max_users,int signed_users, String description, String image,
             boolean available) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.max_users = max_users;
+        this.signed_users = max_users;
         this.description = description;
         this.image = image;
         this.available = available;
@@ -58,14 +60,23 @@ public class EventPayload {
     public void setDate(Date date) {
         this.date = date;
     }
-
+    
     public int getMax_users() {
         return max_users;
     }
-
+    
     public void setMax_users(int max_users) {
         this.max_users = max_users;
     }
+    
+    public int getSigned_users() {
+        return signed_users;
+    }
+
+    public void setSigned_users(int signed_users) {
+        this.signed_users = signed_users;
+    }
+    
 
     public String getDescription() {
         return description;
@@ -90,6 +101,7 @@ public class EventPayload {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
  
 
     

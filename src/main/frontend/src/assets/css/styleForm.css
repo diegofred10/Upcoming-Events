@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Kreon&family=Signika:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
+h5{
+    color:black;
+}
+h2{
+    color: black;
+}
+form{
+    font-weight: bold;
+    color: black;
+
+}
+ #formBody, .modal-header{
+    background-color: #EAEAEA;
+    font-family: "Kreon", serif;
+ }
+
+input{
+    border-style: solid;
+    border-color: black;
+}
+#ADDbutton{
+    width: 10em;
+}
+.modal-title{
+    width: 60%;
+    text-align: end;
+}
+.login-text {
+    width: 60%;
+    text-align: end;
+  }
+#button{
+    background-color: #e32652;
+    border: none;
+    border-radius: 20px;
+    width: 20%;
+}
+#inputDescription{
+    height: 7rem;
+  }

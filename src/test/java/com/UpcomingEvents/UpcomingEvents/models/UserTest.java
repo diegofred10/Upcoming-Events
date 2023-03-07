@@ -6,20 +6,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import com.UpcomingEvents.UpcomingEvents.controllers.UserController;
+import com.UpcomingEvents.UpcomingEvents.payloads.UserPayload;
+import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
 
 
 
 
 @SpringBootTest
 public class UserTest {
-    User miUser = new User(1L, "Diego", "12345", "admin", null);
-Event miEvent = new Event(1L, "concierto", null, 20, "ojete calor en concierto", "url.jpg", false);
-    @Test
+
+    @Autowired
+    UserController controller;
+
+// Event miEvent = new Event(1L, "concierto", null, 20, 0, "ojete calor en concierto", "url.jpg", false);
+    
+@Test
 void UserNameIsDiego(){
-String name = miUser.getName();
+    UserPayload miUser = new UserPayload(2L, "Diego", "12345", "admin");
+
+    controller.save(miUser);
+
+    String name = controller.getOne(2L).getName();
+
 assertEquals("Diego", name);
 }
+
 
 @Test
 void PasswordIsRight(){
