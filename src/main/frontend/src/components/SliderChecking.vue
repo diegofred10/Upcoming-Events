@@ -24,7 +24,7 @@ import SliderComponent from './SliderComponent.vue';
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="login-text">Slider Check
+          <h2 class="login-text">Preview
           </h2>
           <button
             type="button"
