@@ -29,7 +29,7 @@ public class DeleteEventService {
             List<Event> eventsList = new ArrayList<>(user.getEvents());
             for (Event event : eventsList) {
                 if (event.getId()==id) {
-                    eventsList = ArrayUtils.removeElement(eventsList, event);
+                    // eventsList = ArrayUtils.removeElement(eventsList, event);
                     user.setEvents(eventsList);
                 }
             }
