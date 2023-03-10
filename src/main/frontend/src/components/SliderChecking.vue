@@ -1,4 +1,4 @@
-<<script setup>
+<script setup>
 import SliderComponent from './SliderComponent.vue';
 
 </script>
