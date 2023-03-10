@@ -1,40 +1,32 @@
 package com.UpcomingEvents.UpcomingEvents.services;
 
-import java.util.ArrayList;
-import java.util.EventListener;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.UpcomingEvents.UpcomingEvents.models.Event;
 import com.UpcomingEvents.UpcomingEvents.models.User;
 import com.UpcomingEvents.UpcomingEvents.repositories.EventRepository;
 import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
 
 @Service
 public class DeleteEventService {
+    @Autowired
     private UserRepository userRepository;
+    @Autowired
     private EventRepository eventRepository;
-
     
-    public DeleteEventService(UserRepository userRepository, EventRepository eventRepository) {
-        this.userRepository = userRepository;
-        this.eventRepository = eventRepository;
-    }
+    @Autowired
+    private SubscribeService subscribeService;
 
+    public void deleteEvent(Long id_event) {
 
-    public void deleteEvent(Long id) {
         List<User> usersList = userRepository.findAll();
+
         for (User user : usersList) {
-            List<Event> eventsList = new ArrayList<>(user.getEvents());
-            for (Event event : eventsList) {
-                if (event.getId()==id) {
-                    // eventsList = ArrayUtils.removeElement(eventsList, event);
-                    user.setEvents(eventsList);
-                }
-            }
+            subscribeService.signOut(id_event, user.getId());
         }
-        eventRepository.deleteById(id);
+
+        eventRepository.deleteById(id_event);     
     }
-    
 }

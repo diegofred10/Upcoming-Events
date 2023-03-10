@@ -10,7 +10,7 @@ import com.UpcomingEvents.UpcomingEvents.controllers.EventController;
 import com.UpcomingEvents.UpcomingEvents.controllers.UserController;
 import com.UpcomingEvents.UpcomingEvents.payloads.EventPayload;
 import com.UpcomingEvents.UpcomingEvents.payloads.UserPayload;
-import com.UpcomingEvents.UpcomingEvents.repositories.UserRepository;
+
 
 
 
