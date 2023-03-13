@@ -14,4 +14,9 @@ describe("Header", () => {
     const imgTag = wrapper.find("img").exists();
     expect(imgTag).toBe(true);
   });
+  it("should have a button in header tag", () => {
+    const wrapper = mount(Header);
+    expect(wrapper.find("button").attributes().id).toBe('foo');
+    expect(wrapper.attributes('id')).toBe('foo')
+  });
 });

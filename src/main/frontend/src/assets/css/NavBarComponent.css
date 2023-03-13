@@ -81,7 +81,12 @@ header {
   background-color: #e32652;
   border: 2px solid #eaeaea;
 }
-
+#user-view {
+  display: none;
+}
+#admin-view {
+  display: none;
+}
 @media (max-width: 320px) {
   .p-2 {
     width: 60%;

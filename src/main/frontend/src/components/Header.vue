@@ -23,17 +23,17 @@ import PopUpLogin from "./PopUpLogin.vue";
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="opciones">
-        <!--<div class="front-page-container">
-        <PopUpLogin/>
-      </div>   -->
+        <div class="front-page-container" id="login-view">
+          <PopUpLogin />
+        </div>
 
-        <!-- <div class="user-view-container">
+        <div class="user-view-container" id="user-view">
           <button class="home-button" id="button-on">Home</button>
           <button class="my-events-button" id="button-off">My events</button>
           <p class="hi-user">Hi, Username</p>
-        </div> -->
+        </div>
 
-        <div class="admin-view-container">
+        <div class="admin-view-container" id="admin-view">
           <PopUpForm />
           <p class="hi-user">Hi, Username</p>
         </div>
