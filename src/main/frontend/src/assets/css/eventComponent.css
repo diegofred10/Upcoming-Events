@@ -73,3 +73,6 @@ img{
   width: 100%;  
 }
 
+#chekbox-admin{
+  display: none;
+}
