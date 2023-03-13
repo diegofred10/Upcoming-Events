@@ -23,6 +23,7 @@ public class RegisterController {
 
     @PostMapping(path = "/register")
     public ResponseEntity<?>postMethodName(@RequestBody User user){
+       
         try {
             if(service.getAll().contains(user)){
 
