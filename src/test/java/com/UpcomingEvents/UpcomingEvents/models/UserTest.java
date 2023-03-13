@@ -32,7 +32,7 @@ void UserNameIsDiego(){
 
     controller.save(miUser);
 
-    String name = controller.getOne(2L).getName();
+    String name = controller.getOne(2L).getUserName();
 
 assertEquals("Diego", name);
 }

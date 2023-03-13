@@ -24,7 +24,10 @@ public class RegisterController {
     @PostMapping(path = "/register")
     public ResponseEntity<?>postMethodName(@RequestBody User user){
         try {
-            service.store(user);
+            if(service.getAll().contains(user)){
+
+                service.store(user);
+            }
             return ResponseEntity.status(201).body(service.store(user));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);

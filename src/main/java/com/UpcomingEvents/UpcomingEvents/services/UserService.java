@@ -38,16 +38,18 @@ public class UserService {
 
     public User store(User user) {
 
-
-       Optional<User> userFinded = repository.findByName(user.getName());
-        if(userFinded == null){
+    //    Optional<User> userFinded = repository.findByName(user.getName());
+        // if(userFinded == null){
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         String encodedPassword = encoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         return repository.save(user);
-    }
+        // }
 
-    return null;
+        // return null;
+
+
+  
 
     }
 
