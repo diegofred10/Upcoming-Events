@@ -1,6 +1,7 @@
 package com.UpcomingEvents.UpcomingEvents.models;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -12,9 +13,22 @@ import javax.persistence.*;
 public class User {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name= "id_user")
     private Long id;
-    private String name;
+    private String userName;
     private String password;
-    private String rol;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "roles_users", joinColumns = @JoinColumn(name= "user_id"),inverseJoinColumns = @JoinColumn(name= "role_id"))
+    Set<Role> roles;
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+
+    private String role;
     @ManyToMany
     private List<Event> events;
 
@@ -23,11 +37,11 @@ public class User {
     }
 
 
-    public User(Long id, String name, String password, String rol, List<Event> events) {
+    public User(Long id, String userName, String password, String role, List<Event> events) {
         this.id = id;
-        this.name = name;
+        this.userName = userName;
         this.password = password;
-        this.rol = rol;
+        this.role = role;
         this.events = events;
     }
     
@@ -42,13 +56,13 @@ public class User {
     }
 
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
 
@@ -62,13 +76,13 @@ public class User {
     }
 
 
-    public String getRol() {
-        return rol;
+    public String getRole() {
+        return role;
     }
 
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRole(String role) {
+        this.role = role;
     }
 
 
