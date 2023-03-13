@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -55,10 +56,10 @@ public SecurityConfiguration(JpaUserDetailsService jpaUserDetailsService) {
                         .anyRequest().authenticated())
                 .userDetailsService(jpaUserDetailsService)
                 .sessionManagement( session -> session.sessionCreationPolicy(SessionCreationPolicy.ALWAYS)) 
-                .httpBasic(basic -> basic.authenticationEntryPoint(authenticationEntryPoint))       
-                .headers(header -> header.frameOptions().disable());
+                .headers(header -> header.frameOptions().sameOrigin())
+                .httpBasic(basic -> basic.authenticationEntryPoint(authenticationEntryPoint));      
                 // .httpBasic(Customizer.withDefaults());
-                http.addFilterAfter(new CustomFilter(), BasicAuthenticationFilter.class);
+                // http.addFilterAfter(new CustomFilter(), BasicAuthenticationFilter.class);
                 return http.build();
     }
                 
