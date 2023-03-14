@@ -52,6 +52,7 @@ public SecurityConfiguration(JpaUserDetailsService jpaUserDetailsService) {
                 .authorizeRequests(auth -> auth
                         // .antMatchers("/api/events").hasRole("USER")
                         .antMatchers("/api/events/**","/api/register").permitAll()
+                        .antMatchers("/api/users/**").hasRole("ADMIN")
                         .antMatchers("/api/login").hasAnyRole("ADMIN","USER")
                         .anyRequest().authenticated())
                 .userDetailsService(jpaUserDetailsService)

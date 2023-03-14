@@ -20,7 +20,7 @@ public class AuthController {
 
         Map<String, String> json = new HashMap<>();
         json.put("message","Logged");
-        json.put("name",auth.getName());
+        json.put("userName",auth.getName());
         json.put("role", auth.getAuthorities().iterator().next().toString());
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(json);
     }
