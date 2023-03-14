@@ -76,6 +76,7 @@ public SecurityConfiguration(JpaUserDetailsService jpaUserDetailsService) {
                         Collection<UserDetails> users = new ArrayList<>();
                         users.add(user);
 
+
                         return new InMemoryUserDetailsManager(users);
         
         
