@@ -1,5 +1,6 @@
 package com.UpcomingEvents.UpcomingEvents.controllers;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +29,9 @@ public class SubscribeController {
     @PutMapping(path="")
     public void signIn (@RequestBody SubscribePayload subscribe){
         service.signIn(subscribe);
+    }
+    @PutMapping(path="/{id_event}/{id_user}")
+    public void signOut (@PathVariable Long id_event, @PathVariable Long id_user){
+        service.signOut(id_event, id_user);
     }
 }
