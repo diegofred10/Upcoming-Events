@@ -26,9 +26,9 @@ private EventRepository repository;
         Event eventToAdd = new Event(id, event.getTitle(), event.getDate(), event.getMax_users(), event.getSigned_users(), event.getDescription(), event.getImage(), event.isAvailable());
         repository.save(eventToAdd);
     }
-    public List<Event> delete(Long id) {
-        repository.deleteById(id);
-        return repository.findAll();
-    }
+    // public List<Event> delete(Long id) {
+    //     repository.deleteById(id);
+    //     return repository.findAll();
+    // }
     
 }

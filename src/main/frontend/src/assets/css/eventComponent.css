@@ -1,111 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Kreon&family=Signika:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap");
-.event-container {
+img{
+  width: 76%;
+}
+#imgContainer{
   display: flex;
-  margin: 15px;
+  justify-content: center;
 }
-.event-container img {
-  width: 10%;
-}
-.event-container .info-container {
-  margin: 0 10px;
-}
-.event-container .info-container .info-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.event-container .info-container .info-top h2 {
+#mainContainer{
+  width: 100%;
+  border-radius:0%;
+  display: block;
+  border: none;
+  background-color: #121212;
   color: #eaeaea;
-  font-size: 1.5rem;
-  font-family: "Kreon", serif;
+  padding: 1.5em 1em 0em 1em;
 }
-
-.event-container .info-container .info-top .info-date {
-  color: #eaeaea;
-  font-size: 1.5rem;
-  font-family: "Kreon", serif;
-}
-.event-container .info-container .info-text {
-  color: #eaeaea;
+.card-text{
+  font-size: 1.2rem;
   font-family: "Lexend", sans-serif;
 }
-.data-container {
-  width: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+#titleCard{
+  font-size: 1.5rem;
+  font-family: "Kreon", serif;
+  justify-content:space-between;
 }
-.button {
+.card-title{
+  font-size: 1.7rem;
+}
+#date {
+  width: 23%;
+  display: flex;
+}
+
+.buttonSign {
   background-color: #e32652;
   border: none;
   color: #eaeaea;
-  width: 80px;
+  width: 100px;
   height: 40px;
   border-radius: 20px;
-  font-size: 1rem;
-  font-family: "Kreon", serif;
-}
-.data-container span {
-  color: #eaeaea;
   font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
-.sidebar-text {
-  color: #eaeaea;
-}
-
-.button-click {
-  background-color: #121212;
-  border: 2px solid #e32652;
-  color: #eaeaea;
-  width: 80px;
-  height: 40px;
-  border-radius: 20px;
-  font-size: 1rem;
+#maxPeople{
+  width: 100px;
+  font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
-.checkbox {
-  width: 20px;
-}
-
-.sidebar-select {
+#containerCheckbox{
   display: flex;
-    width: 5%;
-    justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
-
 .using-button {
   background-color: #8e8e8e;
   border: none;
   color: #eaeaea;
-  width: 80px;
+  width: 100px;
   height: 40px;
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Kreon", serif;
 }
-@media (max-width:900px){
-  #editBtn{
-    margin-top: 40px;
-    height: 40px;
-    width: 60px;
-  }
-  #aforum{
-    font-size: medium;
-  }
-  #dateEvent{
-    font-size: medium;
-  }
-  .info-text{
-  font-size: small;
-  }
-  #btnEdit {
-    margin-top: 75px;
-  }
-  #imgEvent {
-    width: 101px;
-    height: 90px;
-  }
-  }
+.full{
+  color: #eaeaea;
+  font-size:1.5rem;
+  font-family: "Kreon", serif;
+}
+
+#btnmaxpeopleContainer{
+  width: 100%;  
+}
+
+#chekbox-admin{
+  display: none;
+}
