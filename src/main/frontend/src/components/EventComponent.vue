@@ -21,11 +21,11 @@ defineProps({
     default: null,
   },
   max_users: {
-    type: String,
+    type: Number,
     default: null,
   },
   signed_users: {
-    type: String,
+    type: Number,
     default: null,
   },
   title: {

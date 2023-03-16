@@ -1,9 +1,36 @@
+
+
+
+<script setup>
+import SliderComponent from "../components/SliderComponent.vue";
+import HeaderAdmin from "../components/HeaderUser.vue";
+import PaginationComponent from "../components/PaginationComponent.vue";
+import SliderChecking from "../components/SliderChecking.vue";
+import { onBeforeMount } from "vue";
+import { useEventsStore } from "../stores/EventsStore";
+import EventComponent from "../components/EventComponent.vue";
+
+const store = useEventsStore();
+onBeforeMount(async () => {
+  await store.fetchEvents();
+});
+</script>
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <HeaderAdmin/>
+  <SliderChecking />
+  <SliderComponent />
+  <div v-for="event in store.Events" :key="event">
+    <EventComponent
+      :available="event.available"
+      :date="event.date"
+      :description="event.description"
+      :id="event.id"
+      :image="event.image"
+      :max_users="event.max_users"
+      :signed_users="event.signed_users"
+      :title="event.title"
+    />
   </div>
+  <PaginationComponent />
 </template>
-
-<style scoped>
-
-</style>
+<style scoped></style>

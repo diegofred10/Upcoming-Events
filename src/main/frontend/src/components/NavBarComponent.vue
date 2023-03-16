@@ -1,6 +1,5 @@
 <script>
 
-
 </script>
 
 <template>
@@ -12,27 +11,30 @@
         </a>
       </div>
       <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#opciones"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#opciones"
       >
-        
+      
+    </button>
+    <div class="container collapse navbar-collapse">
+      <button class="home">
+        Home
       </button>
-      <div class="container collapse navbar-collapse">
-        <button class="home">
-          Home
-        </button>
-        <button class="myevents">
-          My Events
-        </button>
-        <div class="hi m-4">
-          Hi, Username
-        </div>
+      <button class="myevents">
+        My Events
+      </button>
+      <div class="hi m-4">
+        Hi, Username
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 </template>
+
+<RouterLink :to="/home" v-if="!auth.isAtuhenticate">Login</RouterLink>
+<RouterLink :to="/about" v-if="{name:'about'}"v-else>about</RouterLink>
 
 <style scoped>
 @import "../assets/css/NavBarComponent.css"

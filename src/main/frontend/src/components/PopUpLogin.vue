@@ -1,17 +1,16 @@
 <script setup>
-import { Ref, watch } from 'vue';
+import { ref, watch } from 'vue';
+import AuthService from '../apis/authentication/AuthService';
+import {useRouter} from 'vue-router';
 
-
-
-const username = ref("");
-const passwrod = ref("");
-const showl = ref(false);
-const isValid = ref(null);
-
+let userName = ref("");
+let password = ref("");
+let showl = ref(false);
+let isValid = ref(false);
 
 const inputRules = {
   rules: {
-    username: {
+    userName: {
       required: (v) => !!v || "Name is requiered",
       lengthR: (v) => v.length > 3 || "Name must be greater than 8 characters",
     },
@@ -24,17 +23,23 @@ const inputRules = {
 
 };
 
-const submitData = async() =>{
-  if(isValid.value){
-    const authService = new authService();
-    const response = await authService.login(userName.value, password.value);
-  };
+const submitData = async (e) => {
+  e.preventDefault();
+  // if(isValid.value){
+  const authService = new AuthService();
+  const response = await authService.login(userName.value, password.value);
+  console.log(userName.value, password.value);
+  localStorage.setItem("username", userName.value);
+  alert("Login Ok");
+  location.href="/about"
 
-  isValid.value = false;
+  // };
+
+  // isValid.value = false;
 };
 
-watch([username,password], ([userName,password]) => {
-  (userName.length >= 3 && password.lenght >=8) ? isValid.value=true : isValid= false;
+watch([userName, password], ([userName, password]) => {
+  (userName.length >= 3 && password.lenght >= 8) ? isValid.value = true : isValid = false;
 })
 
 </script>
@@ -53,15 +58,15 @@ watch([username,password], ([userName,password]) => {
         </div>
 
         <div class="modal-body" id="formBody">
-          <form>
+          <form @submit="submitData">
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form2Example1" class="form-control" placeholder="Email Address" />
+              <input v-model="userName" type="name" id="form2Example1" class="form-control" placeholder="Username" />
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="form2Example2" class="form-control" placeholder="Password" />
+              <input v-model="password" type="password" id="form2Example2" class="form-control" placeholder="Password" />
             </div>
 
             <!-- 2 column grid layout for inline styling -->
@@ -76,6 +81,7 @@ watch([username,password], ([userName,password]) => {
                 </div>
               </div>
 
+
               <div class="col">
                 <!-- Simple link -->
                 <a href="#!">Forgot password?</a>
@@ -84,7 +90,7 @@ watch([username,password], ([userName,password]) => {
 
             <!-- Submit button -->
             <div class="d-flex justify-content-center">
-              <button type="button" id="button" class="btn btn-primary btn-block mb-4">
+              <button type="submit" id="button" class="btn btn-primary btn-block mb-4">
                 Sign in
               </button>
             </div>

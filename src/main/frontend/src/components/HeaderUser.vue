@@ -24,24 +24,24 @@ let userInfo = localStorage.getItem("username")
         <span class="navbar-toggler-icon" id="pp"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="opciones">
+      <!-- <div v-if="userInfo==null" class="collapse navbar-collapse justify-content-end" id="opciones">
         <div class="front-page-container" id="login-view">
           <PopUpLogin />
-        </div>
+        </div> -->
 
-        <!-- <div class="user-view-container" id="user-view">
+        <div class="user-view-container" id="user-view">
           <button class="home-button" id="button-on">Home</button>
           <button class="my-events-button" id="button-off">My events</button>
           <p class="hi-user">Hi, {{userInfo}}</p>
         
-        </div> -->
+        </div>
 
         <!-- <div v-if="userInfo==null" class="admin-view-container" id="admin-view">
           <PopUpForm />
           <p class="hi-user">Hi, {{userInfo}}</p> -->
         <!-- </div> -->
       </div>
-    </div>
+    <!-- </div> -->
   </header>
 </template>
 <style scoped>
